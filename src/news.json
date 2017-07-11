@@ -51,7 +51,7 @@
     "備註" : [
         {
             "github site" : "https://github.com/appzcoder/crud-generator",
-            "migration" : "$table->increments('id');$table->integer('catlog_id')->unsigned();$table->string('subject');$table->longText('content');$table->string('place')->default('')->nullable();$table->dateTime('begin_dt');$table->dateTime('end_dt');$table->boolean('sticky')->default(0);$table->boolean('enabled')->default(1);$table->integer('updated_by')->unsigned();$table->timestamps();"
+            "migration" : "$table->increments('id');$table->integer('catlog_id')->unsigned();$table->string('subject');$table->longText('content');$table->string('place')->default('')->nullable();$table->dateTime('begin_at');$table->dateTime('end_at');$table->boolean('sticky')->default(0);$table->boolean('enabled')->default(1);$table->integer('updated_by')->unsigned();$table->timestamps();"
         }
     ]
 }
