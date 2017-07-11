@@ -1,0 +1,33 @@
+{
+    "fields": [
+        {
+            "name": "code",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "enabled",
+            "type": "boolean"
+        }
+    ],
+    "validations": [
+        {
+            "field": "name",
+            "rules": "required"
+        }
+    ],
+    "自定義 command options，需自行加入 crud.cmd 內" : [
+        {
+            "--indexes": "code"
+        }
+    ],
+    "備註" : [
+        {
+            "github site" : "https://github.com/appzcoder/crud-generator",
+            "migration" : "$table->increments('id');$table->string('code', 5)->index()->unique();$table->string('name', 50);$table->boolean('enabled');$table->timestamps();"
+        }
+    ]
+}

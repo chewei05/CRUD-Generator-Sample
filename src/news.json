@@ -1,0 +1,57 @@
+{
+    "fields": [
+        {
+            "name": "catlog_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "subject",
+            "type": "string"
+        },
+        {
+            "name": "content",
+            "type": "longtext"
+        },
+        {
+            "name": "place",
+            "type": "string"
+        },
+        {
+            "name": "begin_at",
+            "type": "datetime"
+        },
+        {
+            "name": "end_at",
+            "type": "datetime"
+        },
+        {
+            "name": "sticky",
+            "type": "boolean"
+        },
+        {
+            "name": "enabled",
+            "type": "boolean"
+        },
+        {
+            "name": "updated_by",
+            "type": "integer#unsigned"
+        }
+    ],
+    "validations": [
+        {
+            "field": "subject",
+            "rules": "required"
+        }
+    ],
+    "自定義 command options，需自行加入 crud.cmd 內" : [
+        {
+            "--indexes": ""
+        }
+    ],
+    "備註" : [
+        {
+            "github site" : "https://github.com/appzcoder/crud-generator",
+            "migration" : "$table->increments('id');$table->integer('catlog_id')->unsigned();$table->string('subject');$table->longText('content');$table->string('place')->default('')->nullable();$table->dateTime('begin_dt');$table->dateTime('end_dt');$table->boolean('sticky')->default(0);$table->boolean('enabled')->default(1);$table->integer('updated_by')->unsigned();$table->timestamps();"
+        }
+    ]
+}
