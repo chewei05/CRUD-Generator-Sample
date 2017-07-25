@@ -1,22 +1,24 @@
 @ECHO OFF
 
 :INITIAL
-:: ã€Model nameã€‘éœ€è¦å¤§å¯«ã€å–®æ•¸ã€é§å³°å¼å‘½åã€ä¸ç”¨é€£å­—è™Ÿï¼Œã€æª”åã€‘ç‚ºè¤‡æ•¸ã€å–®å­—åº•ç·šå€éš”
+:: ¡iModel name¡j»İ­n¤j¼g¡B³æ¼Æ¡B¾m®p¦¡©R¦W¡B¤£¥Î³s¦r¸¹¡A¡iÀÉ¦W¡j¬°½Æ¼Æ¡B³æ¦r©³½u°Ï¹j
 SET Model_Name=NewsCatlog
 SET File_Name=news_catlogs
-:: å¿…è¦æ™‚æ‰è¨­å®š Options
+:: ¥²­n®É¤~³]©w Options
 SET Options=--indexes=""
-:: å¿…è¦æ™‚æ‰è¨­å®š Foreign Keys
+:: ¥²­n®É¤~³]©w Foreign Keys
 SET ForeignKeys=--foreign-keys=""
 SET Route=yes
 SET Localize=yes
 SET Locales=zh-TW
+:INITIAL
 SET Key=""
 SET ExtOpt=""
 
 :ARTISAN
 IF EXIST "artisan" SET ArtisanPath=
 IF EXIST "..\artisan" SET ArtisanPath=..
+
 
 :ALERT1
 SET /P Key=Are you sure to create CRUD - [%Model_Name%]? (Y/n)
